@@ -33,30 +33,13 @@ function App() {
     const history = useHistory();
 
     React.useEffect(() => {
-      function handleCheckToken() {
-        const token = localStorage.getItem('token');
-        if (token) {
-          auth.checkToken(token)
-            .then(res => {
-              const { _id, email } = res.data;
-              setUserData({ _id, email });
-              setLoggedIn(true);
-              history.push('/');
-            })
-            .catch(err => {
-              console.log(err);
-            })
-        } else {
-          setLoggedIn(false);
-        }
-      }
       handleCheckToken();
       Promise.all([api.getInitialCards(), api.getUserInfo()])
         .then(([cardsData, userData]) => {
           setCards(cardsData);
           setCurrentUser(userData);
         }).catch(err => console.error(err));
-    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     function handleCardLike(card) {
       const isLiked = card.likes.some(i => i._id === currentUser._id);
@@ -76,15 +59,6 @@ function App() {
       }).catch(err => console.error(err));
   }
 
-
-  function handleEditAvatarClick() {
-    setIsEditAvatarPopupOpen(true);
-  }
-
-  function handleEditProfileClick() {
-    setIsEditProfilePopupOpen(true);
-  }
-
   function handleAddPlaceClick() {
     setIsAddPlacePopupOpen(true);
   }
@@ -93,12 +67,21 @@ function App() {
     setSelectedCard(card);
   }
 
-  function closeAllPopups() {
-    setIsEditAvatarPopupOpen(false);
-    setIsEditProfilePopupOpen(false);
-    setIsAddPlacePopupOpen(false);
-    setSelectedCard(null);
-    setIsInfoTooltipPopupOpen(false);
+  function handleAddPlaceSubmit(name, link) {
+    api.addCard(name, link)
+      .then(card => {
+        closeAllPopups();
+        setCards([card, ...cards]);
+      }).catch(err => console.error(err));
+
+  }
+
+  function handleEditAvatarClick() {
+    setIsEditAvatarPopupOpen(true);
+  }
+
+  function handleEditProfileClick() {
+    setIsEditProfilePopupOpen(true);
   }
 
   function handleUpdateUser(name, about) {
@@ -118,13 +101,12 @@ function App() {
       }).catch(err => console.error(err));
   }
 
-  function handleAddPlaceSubmit(name, link) {
-    api.addCard(name, link)
-      .then(card => {
-        closeAllPopups();
-        setCards([card, ...cards]);
-      }).catch(err => console.error(err));
-
+  function closeAllPopups() {
+    setIsEditAvatarPopupOpen(false);
+    setIsEditProfilePopupOpen(false);
+    setIsAddPlacePopupOpen(false);
+    setSelectedCard(null);
+    setIsInfoTooltipPopupOpen(false);
   }
 
   function handleRegister({ password, email }) {
@@ -144,6 +126,7 @@ function App() {
       });
   }
 
+
   function handleLogin({ password, email }) {
     auth.authorize(password, email)
       .then(res => {
@@ -159,6 +142,25 @@ function App() {
   }
 
 
+  
+  function handleCheckToken() {
+    const token = localStorage.getItem('token');
+    if (token) {
+      auth.checkToken(token)
+        .then(res => {
+          const { _id, email } = res.data;
+          setUserData({ _id, email });
+          setLoggedIn(true);
+          history.push('/');
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    } else {
+      setLoggedIn(false);
+    }
+  }
+  
 
   function handleLogOut() {
     setLoggedIn(false);
@@ -171,6 +173,7 @@ function App() {
       <Header userData={userData} handleLogOut={handleLogOut} />
     )
   }
+
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
