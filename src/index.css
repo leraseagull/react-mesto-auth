@@ -4,6 +4,14 @@
 @import url(./blocks/page/__container/page__container.css);
 @import url(./blocks/header/header.css);
 @import url(./blocks/header/__logo/header__logo.css);
+@import url(./blocks/header/__img/header__img.css);
+@import url(./blocks/header/__auth-link/header__auth-link.css);
+@import url(./blocks/header/__auth-link/_type/header__auth-link_type_gray.css);
+@import url(./blocks/header/__email/header__email.css);
+@import url(./blocks/header/__container/header__container.css);
+@import url(./blocks/header/__hamburger-icon/header__hamburger-icon.css);
+@import url(./blocks/header/__hamburger-menu/header__hamburger-menu.css);
+@import url(./blocks/header/__container/_hamburger/header__container_hamburger.css);
 @import url(./blocks/profile/profile.css);
 @import url(./blocks/profile/__avatar/profile__avatar.css);
 @import url(./blocks/profile/__info/profile__info.css);
