@@ -1,10 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Redirect, useHistory } from 'react-router-dom';
+import { Route, Switch, Redirect, useHistory } from 'react-router-dom';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import ImagePopup from './ImagePopup';
-
 import api from '../utils/api';
 import EditProfilePopup from './EditProfilePopup';
 import EditAvatarPopup from './EditAvatarPopup';
@@ -168,6 +167,7 @@ function App() {
     history.push('/signin');
     setUserData({ _id: '', email: '' });
   }
+
   if (loggedIn === null) {
     return (
       <Header userData={userData} handleLogOut={handleLogOut} />
@@ -183,7 +183,7 @@ function App() {
           userData={userData}
           handleLogOut={handleLogOut}
           loggedIn={loggedIn} />
-          <BrowserRouter>
+          
           <Switch>
             <ProtectedRoute exact path='/'
               loggedIn={loggedIn}
@@ -211,7 +211,7 @@ function App() {
               )}
             </Route>
           </Switch>
-          </BrowserRouter>
+          
           <Footer />
 
           {/* Попап редактировать профиль */}

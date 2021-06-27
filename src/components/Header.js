@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, BrowserRouter } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import logo from '../images/Logo.svg';
 
 function Header({ userData, handleLogOut, loggedIn }) {
@@ -10,7 +10,7 @@ function Header({ userData, handleLogOut, loggedIn }) {
     }
   
     return (
-      <BrowserRouter>
+      <>
         {hamburgerOpened && loggedIn &&
           (<div className='header__container header__container_hamburger'>
             <p className='header__email'>{userData.email}</p>
@@ -19,7 +19,7 @@ function Header({ userData, handleLogOut, loggedIn }) {
         }
   
         <header className="header">
-          <a className="header__logo" href="https://learn.javascript.ru/" target="_self">
+          <a className="header__logo" href="https://praktikum.yandex.ru" target="_self">
             <img className="header__img" src={logo} alt="Логотип. Место." />
           </a>
           <Route path='/signup'>
@@ -40,7 +40,7 @@ function Header({ userData, handleLogOut, loggedIn }) {
             </div>
           </Route>
         </header>
-      </BrowserRouter>
+        </>
     );
   }
   
