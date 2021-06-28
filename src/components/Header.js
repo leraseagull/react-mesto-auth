@@ -19,9 +19,11 @@ function Header({ userData, handleLogOut, loggedIn }) {
         }
   
         <header className="header">
-          <a className="header__logo" href="https://praktikum.yandex.ru" target="_self">
-            <img className="header__img" src={logo} alt="Логотип. Место." />
-          </a>
+          <Route>
+          <Link className="header__logo" to='/' target="_self">
+          <img className="header__img" src={logo} alt="Логотип. Место." />
+          </Link>
+            </Route>
           <Route path='/signup'>
             <p className='header__email'>{userData.email}</p>
             <Link className='header__auth-link' to='/signin'>Войти</Link>
@@ -43,5 +45,6 @@ function Header({ userData, handleLogOut, loggedIn }) {
         </>
     );
   }
+
   
   export default Header;

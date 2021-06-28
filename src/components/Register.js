@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+
 function Register({ handleRegister }) {
   const [data, setData] = React.useState({
     email: '',

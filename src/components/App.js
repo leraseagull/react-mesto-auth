@@ -178,7 +178,7 @@ function App() {
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
-        <div className="page__container">
+        <div className="container">
           <Header 
           userData={userData}
           handleLogOut={handleLogOut}
