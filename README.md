@@ -10,4 +10,4 @@
 * npm build
 
 
-Ссылка на сайт: https://leraseagull.github.io/react-mesto-auth/
+Ссылка на сайт: https://leraseagull.github.io/react-mesto-auth/index.html
