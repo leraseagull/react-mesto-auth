@@ -10,4 +10,4 @@
 * npm build
 
 
-Ссылка на сайт: https://mesto.nordic.nomoredomains.icu/
+Ссылка на сайт: https://leraseagull.github.io/react-mesto-auth/
