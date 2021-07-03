@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "./https://leraseagull.github.io/react-mesto-auth/static/css/main.14f570e1.chunk.css",
-    "main.js": "./https://leraseagull.github.io/react-mesto-auth/static/js/main.0b2576da.chunk.js",
-    "main.js.map": "./https://leraseagull.github.io/react-mesto-auth/static/js/main.0b2576da.chunk.js.map",
-    "runtime-main.js": "./https://leraseagull.github.io/react-mesto-auth/static/js/runtime-main.288e357c.js",
-    "runtime-main.js.map": "./https://leraseagull.github.io/react-mesto-auth/static/js/runtime-main.288e357c.js.map",
-    "static/js/2.c819a997.chunk.js": "./https://leraseagull.github.io/react-mesto-auth/static/js/2.c819a997.chunk.js",
-    "static/js/2.c819a997.chunk.js.map": "./https://leraseagull.github.io/react-mesto-auth/static/js/2.c819a997.chunk.js.map",
-    "static/js/3.7cad1536.chunk.js": "./https://leraseagull.github.io/react-mesto-auth/static/js/3.7cad1536.chunk.js",
-    "static/js/3.7cad1536.chunk.js.map": "./https://leraseagull.github.io/react-mesto-auth/static/js/3.7cad1536.chunk.js.map",
-    "index.html": "./https://leraseagull.github.io/react-mesto-auth/index.html",
-    "static/css/main.14f570e1.chunk.css.map": "./https://leraseagull.github.io/react-mesto-auth/static/css/main.14f570e1.chunk.css.map",
-    "static/js/2.c819a997.chunk.js.LICENSE.txt": "./https://leraseagull.github.io/react-mesto-auth/static/js/2.c819a997.chunk.js.LICENSE.txt",
-    "static/media/index.css": "./https://leraseagull.github.io/react-mesto-auth/static/media/hamburger-icon.a46d5c1c.svg",
-    "static/media/Logo.bbe2a6ea.svg": "./https://leraseagull.github.io/react-mesto-auth/static/media/Logo.bbe2a6ea.svg",
-    "static/media/success.1b6082f8.svg": "./https://leraseagull.github.io/react-mesto-auth/static/media/success.1b6082f8.svg",
-    "static/media/unsuccess.df8eddf6.svg": "./https://leraseagull.github.io/react-mesto-auth/static/media/unsuccess.df8eddf6.svg"
+    "main.css": "/react-mesto-auth/static/css/main.b271bdbb.chunk.css",
+    "main.js": "/react-mesto-auth/static/js/main.0b2576da.chunk.js",
+    "main.js.map": "/react-mesto-auth/static/js/main.0b2576da.chunk.js.map",
+    "runtime-main.js": "/react-mesto-auth/static/js/runtime-main.422c4885.js",
+    "runtime-main.js.map": "/react-mesto-auth/static/js/runtime-main.422c4885.js.map",
+    "static/js/2.c819a997.chunk.js": "/react-mesto-auth/static/js/2.c819a997.chunk.js",
+    "static/js/2.c819a997.chunk.js.map": "/react-mesto-auth/static/js/2.c819a997.chunk.js.map",
+    "static/js/3.7cad1536.chunk.js": "/react-mesto-auth/static/js/3.7cad1536.chunk.js",
+    "static/js/3.7cad1536.chunk.js.map": "/react-mesto-auth/static/js/3.7cad1536.chunk.js.map",
+    "index.html": "/react-mesto-auth/index.html",
+    "static/css/main.b271bdbb.chunk.css.map": "/react-mesto-auth/static/css/main.b271bdbb.chunk.css.map",
+    "static/js/2.c819a997.chunk.js.LICENSE.txt": "/react-mesto-auth/static/js/2.c819a997.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/react-mesto-auth/static/media/hamburger-icon.a46d5c1c.svg",
+    "static/media/Logo.bbe2a6ea.svg": "/react-mesto-auth/static/media/Logo.bbe2a6ea.svg",
+    "static/media/success.1b6082f8.svg": "/react-mesto-auth/static/media/success.1b6082f8.svg",
+    "static/media/unsuccess.df8eddf6.svg": "/react-mesto-auth/static/media/unsuccess.df8eddf6.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.288e357c.js",
+    "static/js/runtime-main.422c4885.js",
     "static/js/2.c819a997.chunk.js",
-    "static/css/main.14f570e1.chunk.css",
+    "static/css/main.b271bdbb.chunk.css",
     "static/js/main.0b2576da.chunk.js"
   ]
 }
